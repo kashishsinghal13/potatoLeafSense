@@ -38,6 +38,11 @@ def read_file_as_image(data) -> np.ndarray:
     image = np.array(Image.open(BytesIO(data)))
     return image
 
+
+@app.get("/")
+async def health():
+    return 'Healthy'
+
 @app.post("/predict")
 async def predict(
     file: UploadFile = File(...)
