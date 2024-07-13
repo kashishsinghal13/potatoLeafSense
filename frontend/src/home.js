@@ -153,6 +153,7 @@ export const ImageUpload = () => {
   let confidence = 0;
 
   const sendFile = async () => {
+    console.log(process.env.REACT_APP_API_URL)
     if (image) {
       let formData = new FormData();
       formData.append("file", selectedFile);
