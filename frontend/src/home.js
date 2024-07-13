@@ -9,7 +9,7 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Paper, CardActionArea, CardMedia, Grid, TableContainer, Table, TableBody, TableHead, TableRow, TableCell, Button, CircularProgress } from "@material-ui/core";
-import cblogo from "./cblogo.PNG";
+
 import image from "./bg.png";
 import { DropzoneArea } from 'material-ui-dropzone';
 import { common } from '@material-ui/core/colors';
@@ -55,15 +55,15 @@ const useStyles = makeStyles((theme) => ({
   },
   gridContainer: {
     justifyContent: "center",
-    padding: "4em 1em 0 1em",
+    padding: "1em 1em 0 1em",
   },
   mainContainer: {
     backgroundImage: `url(${image})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: "93vh",
-    marginTop: "8px",
+    height: "87vh",
+    marginTop: "3px",
   },
   imageCard: {
     margin: "auto",
@@ -215,10 +215,10 @@ export const ImageUpload = () => {
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            CodeBasics: Potato Disease Classification
+            Potato Leaf Sense
           </Typography>
           <div className={classes.grow} />
-          <Avatar src={cblogo}></Avatar>
+          
         </Toolbar>
       </AppBar>
       <Container maxWidth={false} className={classes.mainContainer} disableGutters={true}>
@@ -228,7 +228,7 @@ export const ImageUpload = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          spacing={2}
+          spacing={1}
         >
           <Grid item xs={12}>
             <Card className={`${classes.imageCard} ${!image ? classes.imageCardEmpty : ''}`}>
